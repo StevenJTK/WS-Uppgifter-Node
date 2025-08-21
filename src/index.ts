@@ -1,7 +1,8 @@
 import express from "express"
+import { env } from "node:process";
 
 const app = express();
-const port: number = 3000;
+const port: number = Number(env.PORT) || 3000;
 
 app.get("/", (request, response) => {
     response.send("Hello World!");
@@ -9,6 +10,6 @@ app.get("/", (request, response) => {
 
 
 
-app.listen(port, () => {
-    console.log(`Acquiring forbbiden knowledge on port ${port}`);
+app.listen(port, "0.0.0.0", () => {
+console.log(`Acquiring forbidden knowledge on port ${port}`)
 })
