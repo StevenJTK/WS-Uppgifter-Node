@@ -5,9 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node --loader ts-node/esm src/index.ts",
-    "build": "next build"
-
+    "start": "node --loader ts-node/esm src/index.ts"
+    
   },
   "keywords": [],
   "author": "",
