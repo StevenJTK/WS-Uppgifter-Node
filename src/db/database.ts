@@ -1,7 +1,6 @@
 import { Db, MongoClient, ServerApiVersion } from "mongodb"
 import { validateSecret } from "../security/validateEnv.js"
 
-
 const uri: string = validateSecret(process.env.DB_CONNECTION_STRING)
 const dbName: string = validateSecret(process.env.DB_NAME)
 const client = new MongoClient(uri, {
@@ -13,7 +12,6 @@ serverApi: {
 })
 
 let isConnected = false
-
 
 export async function runDB(): Promise<void> {
 

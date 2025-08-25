@@ -1,5 +1,5 @@
-import express, {type Request, type Response} from "express"
 import "dotenv/config"
+import express, {type Request, type Response} from "express"
 import { closeDB, runDB } from "./db/database.js"
 import { env } from "node:process";
 
